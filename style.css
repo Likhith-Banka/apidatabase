@@ -1,0 +1,130 @@
+*{
+    margin :0;
+    padding :0;
+    box-sizing : border-box;
+    font-family : Arial;
+}
+
+body{
+  background-color: azure;
+}
+nav{
+   background-color: blanchedalmond;
+   color :blueviolet;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items : center;
+    max-width : 1200px;
+    margin : 0 auto;
+    padding : 10px;
+}
+.search-container input,button{
+    padding : 5px 10px;
+    border : none;
+    font-size : 18px;
+}
+.search-button{
+    border-radius : 200px;
+    background-color : lightgreen;
+    color : white;
+    cursor : pointer;
+    transition: all 0.5s;
+}
+.search-button:hover{
+    background-color: aquamarine;
+}
+main{
+    max-width: 1200px;
+    margin : 0 auto;
+    margin-block : 38px;
+}
+main section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height : 72vh;
+}
+.movie-container{
+    display : flex; 
+    justify-content: center;
+    background-color: beige;
+    box-shadow : 0px 0px 10px #cccc;
+    width : 80%;
+    border-radius : 5px;
+}
+.movie-poster img{
+    height : 450px;
+    margin-right : 32px;
+    border-radius : 5px;
+}
+.movie-info {
+    padding-inline : 15px;
+}
+.movie-info h2{ 
+    text-align : center;
+    font-size : 32px;
+    margin : 20px 0 12px 0;
+}
+.movie-info h2+p{
+    text-align:center;
+}
+footer{
+   text-align : center;
+   background-color :blueviolet;
+   color : wheat;
+   padding-block : 20px;
+   font-size : 20px;
+}
+ .movie-genre{
+    display : flex;
+    justify-content: center;
+    margin-block : 5px;
+    overflow-x : auto;
+    
+}
+ .movie-genre p{
+    background-color: biege;
+    color : black;
+    padding : 5px 14px;
+    margin-inline:5px;
+    border : 2px solid black;
+    border-radius : 6px;
+    font-weight : 700;
+}
+.movie-info p{
+    font-size : 20px;
+    margin-block : 15px;
+    line-height: 24px;
+}
+
+.movie-container.noBackground{
+    background: none;
+    box-shadow: none;
+    align-items : center;
+}
+
+@media screen and (max-width : 950px){
+    .movie-container{
+        flex-direction : column;
+    }
+    .movie-poster img{
+        width : 100%;
+        height : fit-content;
+        margin-right : 0;
+    }
+    .movie-info{
+        padding-inline : 30px;
+    }
+}
+@media screen and (max-width:630px){
+    .navbar{
+       flex-direction: column;     
+       justify-content:center;
+       align-items: center;
+    }
+    .search-container{
+        margin-top : 10px;
+    }
+}
